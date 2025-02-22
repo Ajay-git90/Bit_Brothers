@@ -6,14 +6,16 @@ const weatherIcon = document.querySelector(".weather-icon");
 
 async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid=${apiKey}`)
+    
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";
          document.querySelector(".weather").style.display = "none";
     }
     else{
         var data  =  await response.json();
+        console.log(data);
         
-        document.querySelector(".weather").innerHTML = data.name;
+        document.querySelector(".city").innerHTML = data.name;
         document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
         document.querySelector(".wind").innerHTML = data.wind.speed +"Km/hr";
         document.querySelector(".humidity").innerHTML = data.main.humidity;
