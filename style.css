@@ -8,13 +8,14 @@
 }
 
 body {
-    background: linear-gradient(135deg, #93b6b8, #897caa);
+    background-color: #f2f2f2;
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 60px;
+   
 }
 .box {
-
+    
     width: 90%;
     max-width: 470px;
     color: #fff;
@@ -73,6 +74,7 @@ body {
 .weather h2{
     font-size: 45px;
     font-weight: 400;
+    margin-top: 10px;
    
 }
 .details{
@@ -90,10 +92,12 @@ body {
 .col img{
     width: 40px;
     margin-right: 10px;
+
 }
 .humidity ,.wind{
     font-size: 28px;
-    margin-top: 6px;
+    margin-top: -6px;
+
     
 
 }
