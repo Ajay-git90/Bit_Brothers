@@ -8,7 +8,7 @@ async function checkWeather(city) {
     const response = await fetch(apiUrl + city + `&appid = ${apiKey}`)
     if(response.status == 404){
         document.querySelector(".error").style.display = "block";
-         document.querySelector(".weather").style.display = "none"
+         document.querySelector(".weather").style.display = "none";
     }
     else{
         var data  =  await response.json();
@@ -36,7 +36,15 @@ async function checkWeather(city) {
         else if(data.weather[0].main == "Snow"){
             weatherIcon.src =  "snow.png";
         }
+          document.querySelector(".error").style.display = "none";
+         document.querySelector(".weather").style.display = "block";
 
     }
+
     
 }
+searchBtn.addEventListener("click", () => {
+    checkWeather(searchBox.value);
+
+})
+checkWeather();
