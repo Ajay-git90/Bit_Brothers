@@ -18,5 +18,25 @@ async function checkWeather(city) {
         document.querySelector(".wind").innerHTML = data.wind.speed +"Km/hr";
         document.querySelector(".humidity").innerHTML = data.main.humidity;
 
+        if(data.weather[0].main == "Clear"){
+            weatherIcon.src =  "clear.png";
+        }
+         else if(data.weather[0].main == "Clouds"){
+            weatherIcon.src =  "clouds.png";
+        }
+        else if(data.weather[0].main == "Drizzle"){
+            weatherIcon.src =  "drizzle.png";
+        }
+        else if(data.weather[0].main == "Mist"){
+            weatherIcon.src =  "mist.png";
+        }
+        else if(data.weather[0].main == "Rain"){
+            weatherIcon.src =  "rain.png";
+        }
+        else if(data.weather[0].main == "Snow"){
+            weatherIcon.src =  "snow.png";
+        }
+
     }
+    
 }
