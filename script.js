@@ -10,5 +10,13 @@ async function checkWeather(city) {
         document.querySelector(".error").style.display = "block";
          document.querySelector(".weather").style.display = "none"
     }
-    
+    else{
+        var data  =  await response.json();
+        
+        document.querySelector(".weather").innerHTML = data.name;
+        document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°c";
+        document.querySelector(".wind").innerHTML = data.wind.speed +"Km/hr";
+        document.querySelector(".humidity").innerHTML = data.main.humidity;
+
+    }
 }
