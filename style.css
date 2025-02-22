@@ -3,11 +3,12 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
+    
+    
 }
 
 body {
     background: linear-gradient(135deg, #93b6b8, #897caa);
-    
     display: flex;
     justify-content: center;
     margin-top: 50px;
